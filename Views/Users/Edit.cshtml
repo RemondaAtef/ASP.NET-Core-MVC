@@ -1,0 +1,28 @@
+﻿@model ProjectExample.Models.UsersVM
+
+@{
+    ViewBag.Title = "Edit";
+
+}
+
+<h2>Edit User</h2>
+
+<form asp-controller="Users" asp-action="Edit" method="post" class="form-group">
+    <label asp-for="UserName">User Name</label>
+    <input type="text" asp-for="UserName" class="form-control" />
+    <span class="text-danger" asp-validation-for="UserName"></span>
+    <br />
+
+    <label asp-for="UserCode">User Code</label>
+    <input type="text" asp-for="UserCode" class="form-control" />
+    <span class="text-danger" asp-validation-for="UserCode"></span>
+    <br />
+
+    <center>
+        <input type="submit" value="Edit" class="btn btn-primary" />
+    </center>
+</form>
+
+<script src="~/jquery/jquery.min.js"></script>
+<script src="~/jquery-validate/jquery.validate.js"></script>
+<script src="~/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
